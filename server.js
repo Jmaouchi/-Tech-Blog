@@ -40,8 +40,8 @@ const sess = {
 // use sessions 
 app.use(session(sess));
 
-// turn on routes
-// app.use(routes);
+// turn on routes ( if this wont be called in server.js, then when you try to test your routes, your will get a 404 bad request error)
+app.use(routes);
 
 // turn on connection to db and server // and force to true means that This allows the table to be overwritten and re-created 
 //if there is any changes

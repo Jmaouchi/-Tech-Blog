@@ -5,7 +5,7 @@ const postData = [
   {
     title: 'javascript for begginers',
     post_url: 'https://www.youtube.com/watch?v=hdI2bqOjy3c&t=2s',
-    user_id: '1'
+    user_id: '1',
   },
   {
     title: 'HTML from scratch',
