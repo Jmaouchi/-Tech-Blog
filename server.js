@@ -6,7 +6,7 @@ const helpers = require('./utils/helpers');
 
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3999;
 // middlewares 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -37,7 +37,6 @@ const sess = {
   })
 };
 
-console.log(sess);
 // use sessions 
 app.use(session(sess));
 
