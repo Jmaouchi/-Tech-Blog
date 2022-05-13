@@ -1,0 +1,12 @@
+<article class="post">
+
+  <div class="title">
+    {{!-- for every sigle post, display the title and the url of that post  --}}
+    <a href="{{post_url}}" target="_blank">{{title}}</a>
+    <span>({{post_url}})</span>
+  </div>
+  
+  {{!-- this will automaticaly send you to the post/id route which is the route where you can view a single comment and can add one if you are logged in --}}
+  <a href="/post/{{id}}">{{comments.length }} comments</a>
+
+</article>
