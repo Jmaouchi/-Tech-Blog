@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require("../../models");
-const { route } = require('./user-routes');
+
 
 // GET all posts
 router.get('/', (req, res) => {
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       'id',
       'title',
       'post_url', 
-      'user_id'
+      'user_id',
     ],
     include: [
       {

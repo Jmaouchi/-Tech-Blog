@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
+  <!--Font awesome link-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="">
     {{!-- header starts here --}}
-    <header>
+    <header style="padding: 25px; background-color: ">
       <h1>
-        <a href="/">Tech Blog</a>
+        <a href="/" class="home">Home <i class="fa-solid fa-house-user"></i></a>
       </h1>
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
+        <a href="/dashboard" class="dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
         <a href="/login">login</a>
@@ -32,7 +34,7 @@
 
     {{!-- footer starts here --}}
     <footer>
-      Thanks for visiting!
+      
     </footer>
   </div>
 {{#if loggedIn}}

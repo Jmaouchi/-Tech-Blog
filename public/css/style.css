@@ -2,23 +2,68 @@
   box-sizing: border-box;
 }
 
+
+:root{
+  --main-color:#052b59;
+  --black:black;
+}
+
 body, html {
+  background-color: rgb(24, 22, 22);
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  color: white;
 }
 
 a {
   text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color .1s;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.comments-tag{
+  color: #225ca3;
+}
+
+
+.dashboard {
+  text-decoration: none;
   color: #225ca3;
   font-weight: bold;
   transition: color .1s;
+  font-size: 20px;
 }
 
-a:hover {
-  color: #3486eb;
+.dashboard:hover {
+  color: white;
+  border-bottom: 1px solid rgb(145, 145, 151);
+  padding: 10px;
+}
+
+
+.home{
+  font-size: 20px;
+}
+
+
+.home:hover {
+  border-bottom: 1px solid rgb(145, 145, 151);
+  padding: 5px;
+}
+
+.home .fa-solid{
+  color: #225ca3;
+}
+
+.home:hover .fa-solid{
+  color: white;
+  transform: rotate(360deg);
+  transition: 1s;
 }
 
 button {
@@ -34,6 +79,14 @@ button {
 
 button:hover {
   background-color: #3486eb;
+}
+
+.add-comment-btn:hover{ 
+  letter-spacing: .06rem;
+}
+
+.add-comment-btn:active{ 
+  background-color: #22a369;
 }
 
 .post-list {
@@ -75,6 +128,7 @@ form label {
 }
 
 header {
+  background-color: #171f29;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
@@ -97,16 +151,15 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
+  font-size: 20px;
   font-weight: bold;
-  transition: color .1s;
+  transition: color .3s;
   margin-left: 16px;
 }
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: red;
 }
 
 .delete-post-btn {
@@ -152,11 +205,19 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: var(--main-color);
+  border: 2px solid white;
+}
+
+.comment:nth-child(even) {
+  background-color: #171f29;
+  color: white;
+  border: 2px solid white;
 }
 
 .comment .meta {
-  font-size: 90%;
+  font-size: 100%;
+  color: white;
   margin-bottom: .5%;
   opacity: .6;
 }
@@ -170,6 +231,7 @@ main {
 }
 
 footer {
+  min-height: 10vh;
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
