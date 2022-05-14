@@ -5,6 +5,7 @@ const { Post, User, Comment } = require('../models');
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('======================');
+  // get all the data from the Post model and call the homepage handlebars template that will use this data to display to the user
   Post.findAll({
     attributes: [
       'id',
