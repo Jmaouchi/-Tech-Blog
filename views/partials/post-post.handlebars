@@ -1,3 +1,5 @@
+{{!-- this partial is almost the same than the post-info partial, the reason i created this, is that i need to hide some data 
+on the homepage route --}}
 <article class="post">
   <div class="title">
     {{!-- for every sigle post, display the title and the url of that post  --}}
@@ -5,8 +7,8 @@
     <span>({{format_url post_url}})</span>
   
 
-  {{!-- this will automaticaly send you to the post/id route which is the route where you can view a single comment and can add one if
-   you are logged in --}}
+    {{!-- this will automaticaly send you to the post/id route which is the route where you can view a single comment and can add one if
+    you are logged in --}}
     <div class="meta">
       <span class="post--infos"> Created by {{user.username}} on {{format_date created_at}}</span>
       <a href="/post/{{id}}" class="comments-tag">{{comments.length}} {{format_plural "comment" comments.length}}</a>
