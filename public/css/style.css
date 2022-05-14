@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
 .comments-tag{
   color: #225ca3;
 }
@@ -33,26 +37,34 @@ a {
 
 .dashboard {
   text-decoration: none;
-  color: #225ca3;
+  margin-right: 15px;
+  color: var(--main-color);
+  padding: 10px;
+  background-color: white;
   font-weight: bold;
   transition: color .1s;
   font-size: 20px;
+  border-radius: 5px;
 }
 
 .dashboard:hover {
   color: white;
+  text-decoration: none;
   border-bottom: 1px solid rgb(145, 145, 151);
+  background-color: var(--main-color);
   padding: 10px;
+  transition: .8s;
 }
 
 .home{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 
 .home:hover {
   border-bottom: 1px solid rgb(145, 145, 151);
   padding: 5px;
+  text-decoration: none;
 }
 
 .home .fa-solid{
@@ -141,8 +153,14 @@ header {
   padding: 0 1%;
 }
 
-header h1 {
-  font-size: 1em;
+#login{
+  padding: 10px;
+  font-size: 20px;
+}
+
+#login:hover .fa-person-walking{
+  transform: rotate(360deg);
+  transition: 2s;
 }
 
 main {
@@ -164,6 +182,9 @@ main {
 
 .btn-no-style:hover {
   background: none;
+}
+
+.btn-no-style:hover  .fa-arrow-right-from-bracket{
   color: red;
 }
 

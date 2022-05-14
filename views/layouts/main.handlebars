@@ -22,9 +22,9 @@
       <nav>
         <a href="/dashboard" class="dashboard">dashboard</a>
         {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">logout</button>
+        <button id="logout" class="btn-no-style">logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login" id="login" >login <i class="fa-solid fa-person-walking"></i></a>
         {{/if}}
       </nav>
     </header>
