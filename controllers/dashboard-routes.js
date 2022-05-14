@@ -32,7 +32,10 @@ router.get('/', withAuth, (req, res) => {
     ]
   })
     .then(dbPostData => {
+      // get the data object 
       const posts = dbPostData.map(post => post.get({ plain: true }));
+      console.log(posts);
+      //render the dashboard handlebar and user the posts object to display the data 
       res.render('dashboard', { posts, loggedIn: true });
     })
     .catch(err => {
@@ -40,6 +43,44 @@ router.get('/', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
+router.get('/userpost', withAuth, (req, res) => {
+  console.log(req.session);
+  console.log('======================');
+  Post.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
+    attributes: [
+      'id',
+      'post_url',
+      'title'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_name', 'post_id', 'user_id'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      const posts = dbPostData.map(post => post.get({ plain: true }));
+      res.render('user-posts', { posts, loggedIn: true });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {

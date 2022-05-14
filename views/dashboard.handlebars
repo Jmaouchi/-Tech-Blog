@@ -1,9 +1,11 @@
+{{!-- set a loader while it's loading the html --}}
 <div class='spinner-wrapper'>
   <div class="spinner"></div>
 </div> 
 
+{{!-- display Post model data  --}}
 <section>
-  <h2>Create A Post</h2>
+  <h2>Create a post</h2>
 
   <form class="new-post-form">
     <div>
@@ -14,7 +16,7 @@
       <label for="post-url">Link</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn-submit">Create</button>
+    <button type="submit" class="btn-submit">Submit Post {{posts.length}}</button>
   </form>
 </section>
 
@@ -23,8 +25,8 @@
   <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
+    <li  style="display: flex;">
+      {{> post-post post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
