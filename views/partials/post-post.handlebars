@@ -4,7 +4,7 @@ on the homepage route --}}
   <div class="title">
     {{!-- for every sigle post, display the title and the url of that post  --}}
     <a href="/post/{{id}}">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+    <a href="{{post_url}}"><span>({{format_url post_url}})</span></a>
   
 
     {{!-- this will automaticaly send you to the post/id route which is the route where you can view a single comment and can add one if
