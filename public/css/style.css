@@ -35,6 +35,14 @@ a:hover{
   color: var(--secondary-color);
 }
 
+.meta{
+  font-size: 12px;
+}
+
+.text {
+  font-size: 20px;
+}
+
 
 .dashboard {
   text-decoration: none;
@@ -52,7 +60,7 @@ a:hover{
   color: white;
   text-decoration: none;
   border-bottom: 1px solid rgb(145, 145, 151);
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
   padding: 10px;
   transition: .8s;
 }
@@ -211,6 +219,7 @@ main {
 
 .col{
   border: 2px solid white;
+  border-radius: 15px;
   margin: 10px;
 }
 
