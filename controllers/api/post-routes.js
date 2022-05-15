@@ -7,7 +7,6 @@ const withAuth = require('../../utils/auth');
 
 
 // GET all posts
-// get all users
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
