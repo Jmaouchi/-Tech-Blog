@@ -11,11 +11,12 @@ router.get('/', (req, res) => {
       'id',
       'post_url',
       'title',
+      'created_at'
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_name' , 'user_id'],
+        attributes: ['id', 'comment_name' , 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -23,13 +24,13 @@ router.get('/', (req, res) => {
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username'] 
       }
     ]
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-
+      console.log(posts);
       res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn
@@ -50,11 +51,12 @@ router.get('/post/:id', (req, res) => {
       'id',
       'post_url',
       'title',
+      'created_at'
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_name', 'post_id', 'user_id'],
+        attributes: ['id', 'comment_name', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']

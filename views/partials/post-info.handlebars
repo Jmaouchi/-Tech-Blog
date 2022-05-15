@@ -1,7 +1,7 @@
 <article class="post">
   <div class="title">
     {{!-- for every sigle post, display the title and the url of that post  --}}
-    <a href="/post/{{id}}">{{title}}</a>
+    <a href="/post/{{id}}">{{title}}</a><span class="post-infos"> This post is  Created by {{user.username}} on {{format_date created_at}}</span>
 
   {{!-- this will automaticaly send you to the post/id route which is the route where you can view a single comment and can add one if
    you are logged in --}}

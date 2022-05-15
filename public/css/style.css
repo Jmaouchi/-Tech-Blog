@@ -77,6 +77,7 @@ a:hover{
   transition: 1s;
 }
 
+
 button {
   background-color: #225ca3;
   border: 0;
@@ -90,6 +91,23 @@ button {
 
 button:hover {
   background-color: #3486eb;
+}
+
+.open-door:hover .fa-person-walking{
+  display: none;
+}
+.open-door .fa-door-open{
+  display: none;
+}
+
+.open-door:hover .fa-door-open{
+  display: inline-block;
+  margin-left: 2px;
+  transition: 1s;
+}
+
+.open-door{
+  
 }
 
 .add-comment-btn:hover{ 
@@ -163,6 +181,7 @@ header {
   transition: 2s;
 }
 
+
 main {
   flex: 1;
   padding: 2% 4%;
@@ -230,9 +249,23 @@ main {
   color: #7d7d7d;
 }
 
+a .span{
+  color: black;
+}
+
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
+  max-width: 100px;
+  color: #1f9c13;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-link:hover{
+  color: white;
 }
 
 .upvote-btn {
@@ -251,6 +284,13 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+}
+
+.span{
+  background-color:rgb(85, 94, 100) ;
+  color:white; 
+  padding:5px;
+  border-radius:15px
 }
 
 article {
@@ -284,8 +324,29 @@ article {
   border-radius: 5px;
 }
 
+#title-post{
+  margin-bottom: 25px;
+}
+
 .new-post-form input {
   width: 300px;
+}
+
+.user-posts-section{
+  min-height: 70vh;
+}
+.user-posts-section h2{
+  margin-bottom: 25px;
+}
+
+h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  background-color: var(--main-color);
+  margin-bottom: 25px;
+  padding: 10px;
 }
 
 .edit-post-form {

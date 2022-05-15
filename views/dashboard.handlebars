@@ -16,21 +16,21 @@
       <label for="post-url">Link</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn-submit">Submit Post {{posts.length}}</button>
+    <button type="submit" class="btn-submit">Submit Post</button>
   </form>
 </section>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
+<section class="user-posts-section">
+  <h4>Your Posts <i class="fa-solid fa-bell ml-2"></i></h4>
+  <ul>
     {{#each posts as |post|}}
-    <li  style="display: flex;">
+    <li>
       {{> post-post post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{/if}}
 
