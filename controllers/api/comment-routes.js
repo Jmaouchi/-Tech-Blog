@@ -95,7 +95,7 @@ router.post('/', (req, res) => {
 
 
 
-// delete collumn by id
+// delete column by id
 router.delete('/:id', (req, res) => {
   Comment.destroy({
     where: {
@@ -116,7 +116,7 @@ router.delete('/:id', (req, res) => {
 });
 
 
-// update a collumn by id
+// update a column by id
 router.put('/:id', (req, res) => {
   Comment.update(req. body, {
     where: {

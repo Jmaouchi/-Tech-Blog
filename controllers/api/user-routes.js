@@ -117,9 +117,7 @@ router.post('/logout', (req, res) => {
 
 });
 
-// this post is to create a new user // for example someone trying to reate an account need to fill out a form. the data will be sent to the user table
-// then send the data back as json 
-// this api will be used to create an account 
+// this post is to create a new user 
 router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
