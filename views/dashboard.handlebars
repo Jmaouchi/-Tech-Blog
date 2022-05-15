@@ -4,7 +4,7 @@
 </div> 
 
 {{!-- display Post model data  --}}
-<section>
+<section class="section-content">
   <h2>Create a post</h2>
 
   <form class="new-post-form">
@@ -18,21 +18,20 @@
     </div>
     <button type="submit" class="btn-submit">Submit Post</button>
   </form>
-</section>
 
-{{#if posts.length}}
-<section class="user-posts-section">
-  <h4>Your Posts <i class="fa-solid fa-bell ml-2"></i></h4>
-  <ul>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-post post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ul>
+  {{#if posts.length}}
+  <section class="user-edit-posts-section">
+    <h4>Your Posts <i class="fa-solid fa-bell ml-2"></i></h4>
+    <ul>
+      {{#each posts as |post|}}
+      <li>
+        {{> post-post post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
 </section>
-{{/if}}
-
 <script src="/javascript/add-post.js"></script>
 <script src="/javascript/index.js"></script>

@@ -5,14 +5,14 @@
   </h2>
   <form class="edit-post-form">
     <div>
-      <input name="post-title" type="text" />
+      <input class="edit-post-input" name="post-title" type="text" />
     </div>
     <div>
-      Post is Created by you on {{format_date post.created_at}}
+      Post is created by you on {{format_date post.created_at}}
       |
       and has <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
+    <button type="submit" class="save-post-btn">Save change</button>
     <button type="button" class="delete-post-btn">Delete post</button>
   </form>
 </section>
