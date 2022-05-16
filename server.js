@@ -28,7 +28,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 require('dotenv').config();
 const sess = {
-  secret: process.env.SS_SECRET,
+  secret: 'hello world',
   cookie: {}, // set a timer for the cookie, and this will log you out after 15mins 
   resave: false,
   saveUninitialized: true,
