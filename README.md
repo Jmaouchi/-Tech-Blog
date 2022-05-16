@@ -121,7 +121,7 @@ SOFTWARE
 
   3. Used sequelize to make connection between database and server
 
-  4. Application is deployed on [heroku](https://still-eyrie-43558.herokuapp.com/) : Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage, and scale modern apps.
+  4. Application is deployed on [heroku](https://safe-meadow-38060.herokuapp.com/) : Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage, and scale modern apps.
 
 
 
@@ -130,7 +130,7 @@ SOFTWARE
 
   ## Link:  
    
-  https://whispering-crag-45136.herokuapp.com/
+  https://safe-meadow-38060.herokuapp.com/
 
 
   # Contact:
