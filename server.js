@@ -1,12 +1,12 @@
 const express = require('express');
-const routes = require('./controllers');
+const routes = require('./controllers/');
 const sequelize = require('./config/connection');
 const path = require('path');
 const helpers = require('./utils/helpers');
 
 
 const app = express();
-const PORT = process.env.PORT || 3999;
+const PORT = process.env.PORT || 3002;
 // middlewares 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
