@@ -51,7 +51,7 @@ async function signupFormHandler(event) {
 
     if (response.ok) {
       // after the account is been created, reffer them to another page 
-      document.location.replace('/dashboard')
+      document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
     }
