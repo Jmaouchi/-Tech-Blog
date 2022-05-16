@@ -43,8 +43,7 @@ SOFTWARE
 
 
   # About The Application:
-    This app provides the backend of an E-commerce site and holds data for products, categories, tags, etc.
-  
+   Full stack web application usind heroku and JAWSdb. For users to post tech related content in a CMS Blog style.
 
   # Technology
 
@@ -125,7 +124,8 @@ SOFTWARE
 
 
 
-  # Watch me do it here: by clicking here  
+  ## Shadow
+  ![](public/images/gif.gif)
 
 
   ## Link:  
