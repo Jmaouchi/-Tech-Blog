@@ -67,21 +67,15 @@
 
 * Clone this repository to use this application on local machine, then npm i 
 
-
 * To install necessary dependencies, run the following command :
-
-  npm i express, bcrypt, mysql2, connect-session-sequelize, express-handlebars, express-session, sequelize, dotenv,  npm i -D nodemon ( nodemon is not required)
+npm i express, bcrypt, mysql2, connect-session-sequelize, express-handlebars, express-session, sequelize, dotenv,  npm i -D nodemon ( nodemon is not required)
 
 * npm run seed, to seed some data to database
 
-
 * npm run dev ( to run the app with nodemon)  
   
-
 * The application will be invoked with the following command: This will start localhost server on PORT 3999*.*
-
-    node server.js
-
+node server.js
 
 * Open browser and type 
 
