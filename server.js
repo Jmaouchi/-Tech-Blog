@@ -3,6 +3,7 @@ const routes = require('./controllers/');
 const sequelize = require('./config/connection');
 const path = require('path');
 const helpers = require('./utils/helpers');
+const anime = require('animejs');
 
 
 const app = express();
@@ -29,7 +30,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 const sess = {
   secret: process.env.SS_SECRET,
-  cookie: {add maxAge: 900000}, // set a timer for the cookie, and this will log you out after 15mins 
+  cookie: {maxAge: 900000}, // set a timer for the cookie, and this will log you out after 15mins 
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

@@ -45,43 +45,6 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/userpost', withAuth, (req, res) => {
-  console.log(req.session);
-  console.log('======================');
-  Post.findAll({
-    where: {
-      user_id: req.session.user_id
-    },
-    attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at'
-    ],
-    include: [
-      {
-        model: Comment,
-        attributes: ['id', 'comment_name', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
-  })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('user-posts', { posts, loggedIn: true });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
 
 
 router.get('/edit/:id', withAuth, (req, res) => {
