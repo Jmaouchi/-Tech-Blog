@@ -17,7 +17,7 @@
 
 
 
-# About The Application:
+# Summary:
   Full stack web application using heroku and JAWSdb. For users to post tech related content in a CMS Blog style.
 
 
